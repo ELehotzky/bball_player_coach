@@ -20,13 +20,13 @@ phil = Coach.new("Phil Jackson", "Ring Chasing")
 tim_pop = Session.new(tim,pop,60)
 kobe_pat = Session.new(kobe,pat,30)
 lebron_chip = Session.new(lebron, chip, 60, "shot")
-tim_pat= Session.new(tim,pat,60)
+tim_pat= Session.new(tim,pat,90)
 tim_kerr= Session.new(tim,kerr,60, "luck")
 kobe_phil =Session.new(kobe,phil,60)
 
 pop.create_session(tim, 60)               #creates a session for coach called from  & player passed in with skill practiced to "all" as default
 pop.create_session(kevin, 60, "defense")  #creates a session for coach called from  & player passed in with skill practiced set to "defense"
-kobe.create_session(pat, 30)              #creates a session for player called from & coach passed in with skill practiced to "all" as default
+kobe.create_session(pat, 60)              #creates a session for player called from & coach passed in with skill practiced to "all" as default
 kobe.create_session(pat, 30, "scoring")   #creates a session for player called from & coach passed in with skill practiced to "scoring"
 
 pop.players                               #returns all of the player objects pop has coached
@@ -38,12 +38,13 @@ kobe.all_sessions                         #returns all of the sessions kobe had
 Player.all          #returns all player objects in existance
 Coach.all           #returns all coach objects in existance
 
+Player.who_is(35)   #returns player object of kevin durant or other player based on their
 
 
 ###############################Bonus##########################################
 Player.hardest_working  #returns string of hardest_working Player (most time overall sessions)
 Coach.hardest_working   #returns string of hardest_working Coah   (most time overall sessions)
 
-# binding.pry
-#
-# false
+binding.pry
+
+false

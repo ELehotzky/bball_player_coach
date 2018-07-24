@@ -27,7 +27,7 @@ class Coach
   def self.hardest_working
     hash ={}
     Session.all.each do |session|
-      if !hash.has_key?(session.player.name)
+      if !hash.has_key?(session.coach.name)
         hash[session.coach.name] = session.time
       else
         stored_value = hash[session.coach.name]

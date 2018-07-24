@@ -25,7 +25,7 @@ class Player
   end
 
   def self.who_is(number)
-    @@all.find do |player|
+    all.find do |player|
       player.number == number
     end
   end
